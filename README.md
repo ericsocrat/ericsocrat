@@ -1,10 +1,10 @@
 <div align="center">
 
 <!-- Animated header banner -->
-<img src="assets/header.svg" alt="ericsocrat — Full-Stack Engineer · Data Architect · Open Source" width="100%" />
+<img src="assets/header.svg" alt="ericsocrat — Product Builder & AI Strategist" width="100%" />
 
 <!-- Typing animation -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=70&lines=Shipping+data-driven+products+%F0%9F%9A%80;1%2C000%2B+products+scored+%C2%B7+12K%2B+tests+passing+%E2%9C%85" alt="Typing SVG" /></a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=620&height=70&lines=I+don%27t+write+code+%E2%80%94+I+architect+products+%F0%9F%9A%80;1%2C000%2B+products+scored+%C2%B7+12K%2B+tests+passing+%E2%9C%85" alt="Typing SVG" /></a>
 
 </div>
 
@@ -13,13 +13,17 @@
 
 ## `$ whoami`
 
-Full-stack engineer focused on **data integrity**, **nutritional science databases**, and **AI-powered financial platforms**. I build systems where every number is traceable, every test is automated, and every deployment is green.
+Product builder who turns ideas into shipped software by strategically directing AI agents. I don’t come from a traditional coding background — I come from **knowing exactly what to build and how to orchestrate the tools to build it**.
+
+I design the architecture, define the data models, write the specs, and drive every decision — then work with AI pair-programmers like GitHub Copilot to execute at speed. The result? Production-grade systems with thousands of automated tests, CI/CD pipelines, and real users.
 
 ```typescript
 const ericsocrat = {
-  focus:     ["Data Engineering", "Full-Stack Web", "Open Source"],
-  stack:     ["TypeScript", "Python", "PostgreSQL", "Next.js", "FastAPI"],
-  testing:   "333 QA checks + 12K unit tests across projects",
+  role:      "Product Builder & AI Strategist",
+  superpower: "Turning vision into production software via AI agents",
+  focus:     ["Data Products", "AI-Augmented Development", "Open Source"],
+  stack:     ["Next.js", "Python", "PostgreSQL", "Supabase", "FastAPI"],
+  method:    "Architecture + AI Agents + Relentless QA",
   principle: "No data ships without automated verification",
 };
 ```
@@ -65,18 +69,33 @@ const ericsocrat = {
 
 <img src="assets/wave.svg" width="100%" />
 
+## 🧠 How I Build
+
+> *"The future belongs to people who can direct AI, not just people who can type code."*
+
+I work at the intersection of **product thinking** and **AI-augmented execution**:
+
+- **Architecture first** — I design the database schemas, API contracts, and system structure
+- **AI as my engineering team** — I direct Copilot agents with precise strategy and context
+- **Quality is non-negotiable** — 333 QA checks, 12K+ tests, SonarCloud, CodeQL, Playwright E2E
+- **Ship fast, ship right** — CI/CD pipelines, branch protection, automated deployment
+
+Every commit goes through automated gates. Every data point is verified. Every deployment is green.
+
+<img src="assets/wave.svg" width="100%" />
+
 ## 🛠 Tech Stack
 
 <div align="center">
 
-**Languages**
+**Core Technologies**
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 
-**Frameworks & Tools**
+**Frameworks & Platforms**
 
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
@@ -85,13 +104,13 @@ const ericsocrat = {
 ![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
 
-**Testing & CI/CD**
+**Quality & Automation**
 
+![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-000?style=for-the-badge&logo=githubcopilot&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![SonarCloud](https://img.shields.io/badge/SonarCloud-F3702A?style=for-the-badge&logo=sonarcloud&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 </div>
 
