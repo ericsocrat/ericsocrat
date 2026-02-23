@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="50%" style="stop-color:#bc8cff"/>
+      <stop offset="100%" style="stop-color:#39d353"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#bc8cff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#39d353;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" fill="url(#bg)" rx="12"/>
+
+  <!-- Animated grid lines -->
+  <g opacity="0.04">
+    <line x1="0" y1="50" x2="900" y2="50" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="0" y1="150" x2="900" y2="150" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="0" y1="250" x2="900" y2="250" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="150" y1="0" x2="150" y2="300" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="300" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="300" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="300" stroke="#58a6ff" stroke-width="0.5"/>
+    <line x1="750" y1="0" x2="750" y2="300" stroke="#58a6ff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Floating data particles -->
+  <g filter="url(#softGlow)">
+    <circle cx="80" cy="60" r="2" fill="#39d353" opacity="0.6">
+      <animate attributeName="cy" values="60;40;60" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="240" r="1.5" fill="#58a6ff" opacity="0.5">
+      <animate attributeName="cy" values="240;220;240" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="70" r="2.5" fill="#bc8cff" opacity="0.4">
+      <animate attributeName="cy" values="70;50;70" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="820" cy="230" r="1.8" fill="#39d353" opacity="0.5">
+      <animate attributeName="cy" values="230;210;230" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="45" r="1.5" fill="#58a6ff" opacity="0.3">
+      <animate attributeName="cy" values="45;30;45" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="260" r="2" fill="#bc8cff" opacity="0.4">
+      <animate attributeName="cy" values="260;245;260" dur="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Floating code symbols -->
+  <g font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="11" opacity="0.08" fill="#58a6ff">
+    <text x="50" y="90">SELECT * FROM</text>
+    <text x="700" y="40">async fn()</text>
+    <text x="30" y="270">{data: [...]}</text>
+    <text x="750" y="280">WHERE score &gt;</text>
+    <text x="680" y="140">npm run build</text>
+    <text x="60" y="170">&lt;Component /&gt;</text>
+    <text x="350" y="280">/// docs</text>
+  </g>
+
+  <!-- Decorative bracket left -->
+  <text x="60" y="160" font-family="'JetBrains Mono', monospace" font-size="80" fill="#58a6ff" opacity="0.12" filter="url(#softGlow)">{</text>
+
+  <!-- Decorative bracket right -->
+  <text x="800" y="160" font-family="'JetBrains Mono', monospace" font-size="80" fill="#39d353" opacity="0.12" filter="url(#softGlow)">}</text>
+
+  <!-- Main name with gradient -->
+  <text x="450" y="120" text-anchor="middle" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="52" fill="url(#textGrad)" filter="url(#glow)">
+    ericsocrat
+  </text>
+
+  <!-- Animated underline -->
+  <line x1="200" y1="135" x2="700" y2="135" stroke="url(#lineGrad)" stroke-width="2" stroke-linecap="round">
+    <animate attributeName="x1" values="350;200;350" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="550;700;550" dur="6s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Subtitle -->
+  <text x="450" y="170" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="14" fill="#8b949e" letter-spacing="3">
+    Full-Stack Engineer  ·  Data Architect  ·  Open Source
+  </text>
+
+  <!-- Tech tags -->
+  <g font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">
+    <rect x="195" y="195" width="90" height="24" rx="12" fill="#161b22" stroke="#58a6ff" stroke-width="0.8" opacity="0.8"/>
+    <text x="240" y="211" fill="#58a6ff">TypeScript</text>
+
+    <rect x="300" y="195" width="70" height="24" rx="12" fill="#161b22" stroke="#39d353" stroke-width="0.8" opacity="0.8"/>
+    <text x="335" y="211" fill="#39d353">Python</text>
+
+    <rect x="385" y="195" width="85" height="24" rx="12" fill="#161b22" stroke="#bc8cff" stroke-width="0.8" opacity="0.8"/>
+    <text x="427" y="211" fill="#bc8cff">PostgreSQL</text>
+
+    <rect x="485" y="195" width="70" height="24" rx="12" fill="#161b22" stroke="#58a6ff" stroke-width="0.8" opacity="0.8"/>
+    <text x="520" y="211" fill="#58a6ff">Next.js</text>
+
+    <rect x="570" y="195" width="70" height="24" rx="12" fill="#161b22" stroke="#39d353" stroke-width="0.8" opacity="0.8"/>
+    <text x="605" y="211" fill="#39d353">FastAPI</text>
+
+    <rect x="655" y="195" width="65" height="24" rx="12" fill="#161b22" stroke="#f0883e" stroke-width="0.8" opacity="0.8"/>
+    <text x="687" y="211" fill="#f0883e">CI/CD</text>
+  </g>
+
+  <!-- Pulsing cursor -->
+  <rect x="454" y="240" width="2" height="18" fill="#39d353" rx="1">
+    <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="450" y="255" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" fill="#6e7681">building things that matter</text>
+
+  <!-- Corner accents -->
+  <path d="M 20 30 L 20 15 L 35 15" stroke="#58a6ff" stroke-width="1.5" fill="none" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M 880 30 L 880 15 L 865 15" stroke="#39d353" stroke-width="1.5" fill="none" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="1s"/>
+  </path>
+  <path d="M 20 270 L 20 285 L 35 285" stroke="#bc8cff" stroke-width="1.5" fill="none" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="2s"/>
+  </path>
+  <path d="M 880 270 L 880 285 L 865 285" stroke="#58a6ff" stroke-width="1.5" fill="none" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="0.5s"/>
+  </path>
+</svg>
