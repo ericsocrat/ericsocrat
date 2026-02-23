@@ -12,9 +12,9 @@
 
 I’m **Eric Socratous** — a product builder from Cyprus, based in Kraków, Poland. My background is in Marine Engineering & Naval Architecture, but my passion has always been in technology and building things.
 
-I don’t come from a traditional CS background. Instead, I leverage **AI agents and strategic product thinking** to turn ideas into real, shipped software. I design the architecture, define the data models, write the specs, and make every product decision — then work with AI tools like GitHub Copilot to execute at speed.
+I don’t come from a traditional CS background. Instead, I leverage **AI agents and strategic product thinking** to turn ideas into production-grade software. I design the architecture, define the data models, write the specs, and make every product decision — then work with AI tools like GitHub Copilot to execute at speed.
 
-The result? Production-grade systems with hundreds of automated tests, CI/CD pipelines, and real users.
+The result? Systems with hundreds of automated tests, CI/CD pipelines, and solid engineering practices — ready to ship.
 
 ```typescript
 const eric = {
