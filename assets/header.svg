@@ -1,25 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450">
   <defs>
-    <!-- Room wall gradient -->
+    <!-- Room wall gradient - warmer -->
     <linearGradient id="wallBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1e2e"/>
-      <stop offset="100%" style="stop-color:#0f1219"/>
+      <stop offset="0%" style="stop-color:#1c1f2e"/>
+      <stop offset="60%" style="stop-color:#151821"/>
+      <stop offset="100%" style="stop-color:#0e1018"/>
     </linearGradient>
-    <!-- Warm lamp glow -->
-    <radialGradient id="lampGlow" cx="50%" cy="0%" r="80%">
-      <stop offset="0%" style="stop-color:#ffb347;stop-opacity:0.15"/>
-      <stop offset="60%" style="stop-color:#ff8c00;stop-opacity:0.04"/>
-      <stop offset="100%" style="stop-color:#ff8c00;stop-opacity:0"/>
+    <!-- Warm ambient glow from lamp -->
+    <radialGradient id="lampGlow" cx="18%" cy="25%" r="45%">
+      <stop offset="0%" style="stop-color:#ffb347;stop-opacity:0.18"/>
+      <stop offset="40%" style="stop-color:#ff9f1c;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#ff9f1c;stop-opacity:0"/>
     </radialGradient>
-    <!-- Monitor screen glow -->
-    <radialGradient id="screenGlow" cx="50%" cy="50%" r="70%">
-      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0.12"/>
+    <!-- Screen glow -->
+    <radialGradient id="screenGlow" cx="48%" cy="45%" r="30%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0.08"/>
       <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:0"/>
     </radialGradient>
-    <!-- Window night sky -->
+    <!-- String light warm glow -->
+    <radialGradient id="bulbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffe4a8;stop-opacity:0.9"/>
+      <stop offset="40%" style="stop-color:#ffcc66;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#ffaa00;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Night window -->
     <linearGradient id="nightSky" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0b0e1a"/>
-      <stop offset="100%" style="stop-color:#1a1e35"/>
+      <stop offset="0%" style="stop-color:#070b18"/>
+      <stop offset="100%" style="stop-color:#0f1528"/>
     </linearGradient>
     <!-- Name gradient -->
     <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -27,484 +34,506 @@
       <stop offset="50%" style="stop-color:#bc8cff"/>
       <stop offset="100%" style="stop-color:#39d353"/>
     </linearGradient>
-    <!-- Desk wood gradient -->
+    <!-- Desk wood -->
     <linearGradient id="deskWood" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#3d2b1f"/>
-      <stop offset="100%" style="stop-color:#2a1d14"/>
+      <stop offset="0%" style="stop-color:#4a3425"/>
+      <stop offset="50%" style="stop-color:#3d2b1f"/>
+      <stop offset="100%" style="stop-color:#2e1f15"/>
     </linearGradient>
-    <!-- Coffee gradient -->
-    <linearGradient id="coffeeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#5c3a1e"/>
-      <stop offset="100%" style="stop-color:#3d2610"/>
+    <!-- Desk edge highlight -->
+    <linearGradient id="deskEdge" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a4030"/>
+      <stop offset="100%" style="stop-color:#3d2b1f"/>
     </linearGradient>
     <!-- Skin tone -->
     <linearGradient id="skinTone" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#d4a574"/>
       <stop offset="100%" style="stop-color:#c49660"/>
     </linearGradient>
-    <!-- Sweater gradient -->
+    <!-- Sweater -->
     <linearGradient id="sweaterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#2a2d3a"/>
-      <stop offset="100%" style="stop-color:#1e2028"/>
+      <stop offset="0%" style="stop-color:#2a2d3e"/>
+      <stop offset="100%" style="stop-color:#1e2030"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <filter id="shadow">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
-    </filter>
-    <!-- Plant leaf gradient -->
-    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Coffee -->
+    <linearGradient id="coffeeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#5c3a1e"/>
+      <stop offset="100%" style="stop-color:#3d2610"/>
+    </linearGradient>
+    <!-- Leaf gradients -->
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" style="stop-color:#39d353"/>
       <stop offset="100%" style="stop-color:#238636"/>
     </linearGradient>
-    <linearGradient id="leafGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="leafGrad2" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" style="stop-color:#2ea043"/>
       <stop offset="100%" style="stop-color:#196c2e"/>
     </linearGradient>
-    <!-- Book gradients -->
-    <linearGradient id="book1" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" style="stop-color:#58a6ff"/>
-      <stop offset="100%" style="stop-color:#388bfd"/>
-    </linearGradient>
-    <linearGradient id="book2" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" style="stop-color:#bc8cff"/>
-      <stop offset="100%" style="stop-color:#8b5cf6"/>
-    </linearGradient>
-    <linearGradient id="book3" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" style="stop-color:#f0883e"/>
-      <stop offset="100%" style="stop-color:#d47320"/>
-    </linearGradient>
-    <!-- Subtle line gradient for text area -->
+    <!-- Book spines -->
+    <linearGradient id="book1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:#58a6ff"/><stop offset="100%" style="stop-color:#388bfd"/></linearGradient>
+    <linearGradient id="book2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:#bc8cff"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient>
+    <linearGradient id="book3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:#f0883e"/><stop offset="100%" style="stop-color:#d47320"/></linearGradient>
+    <linearGradient id="book4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:#39d353"/><stop offset="100%" style="stop-color:#238636"/></linearGradient>
+    <linearGradient id="book5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" style="stop-color:#f78166"/><stop offset="100%" style="stop-color:#da6c50"/></linearGradient>
+    <!-- Text area line -->
     <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0"/>
-      <stop offset="50%" style="stop-color:#bc8cff;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#bc8cff;stop-opacity:0.5"/>
       <stop offset="100%" style="stop-color:#39d353;stop-opacity:0"/>
     </linearGradient>
+    <!-- Chair gradient -->
+    <linearGradient id="chairGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" style="stop-color:#2d333b"/>
+      <stop offset="100%" style="stop-color:#21262d"/>
+    </linearGradient>
+    <!-- Rug gradient -->
+    <linearGradient id="rugGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2a1d35;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#2a1d35;stop-opacity:0.5"/>
+      <stop offset="50%" style="stop-color:#1e1428;stop-opacity:0.6"/>
+      <stop offset="80%" style="stop-color:#2a1d35;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#2a1d35;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="1.5" result="coloredBlur"/><feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadow"><feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.35"/></filter>
+    <filter id="lightShadow"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000" flood-opacity="0.2"/></filter>
   </defs>
 
-  <!-- ======================== ROOM BACKGROUND ======================== -->
-  <rect width="900" height="400" fill="url(#wallBg)" rx="12"/>
+  <!-- ======== ROOM ======== -->
+  <rect width="900" height="450" fill="url(#wallBg)" rx="12"/>
+  <!-- Warm ambient glows -->
+  <ellipse cx="160" cy="110" rx="280" ry="220" fill="url(#lampGlow)"/>
+  <ellipse cx="420" cy="210" rx="220" ry="200" fill="url(#screenGlow)"/>
 
-  <!-- Warm ambient light from lamp -->
-  <ellipse cx="180" cy="120" rx="250" ry="200" fill="url(#lampGlow)"/>
+  <!-- ======== FAIRY / STRING LIGHTS across top wall ======== -->
+  <g>
+    <!-- Wire -->
+    <path d="M 30 38 Q 110 55 190 38 Q 270 20 350 42 Q 430 60 510 40 Q 590 18 670 42 Q 715 52 740 44" fill="none" stroke="#3d3d3d" stroke-width="1" opacity="0.5"/>
+    <!-- Bulbs with glow -->
+    <circle cx="70" cy="46" r="6" fill="url(#bulbGlow)" opacity="0.7"><animate attributeName="opacity" values="0.7;0.45;0.7" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="70" cy="46" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="150" cy="44" r="6" fill="url(#bulbGlow)" opacity="0.6"><animate attributeName="opacity" values="0.6;0.4;0.6" dur="3.5s" repeatCount="indefinite" begin="0.5s"/></circle>
+    <circle cx="150" cy="44" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="230" cy="32" r="6" fill="url(#bulbGlow)" opacity="0.65"><animate attributeName="opacity" values="0.65;0.4;0.65" dur="4s" repeatCount="indefinite" begin="1s"/></circle>
+    <circle cx="230" cy="32" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="310" cy="38" r="6" fill="url(#bulbGlow)" opacity="0.7"><animate attributeName="opacity" values="0.7;0.5;0.7" dur="2.8s" repeatCount="indefinite" begin="0.3s"/></circle>
+    <circle cx="310" cy="38" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="390" cy="50" r="6" fill="url(#bulbGlow)" opacity="0.6"><animate attributeName="opacity" values="0.6;0.35;0.6" dur="3.8s" repeatCount="indefinite" begin="1.5s"/></circle>
+    <circle cx="390" cy="50" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="470" cy="42" r="6" fill="url(#bulbGlow)" opacity="0.65"><animate attributeName="opacity" values="0.65;0.38;0.65" dur="3.2s" repeatCount="indefinite" begin="0.8s"/></circle>
+    <circle cx="470" cy="42" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="550" cy="30" r="6" fill="url(#bulbGlow)" opacity="0.7"><animate attributeName="opacity" values="0.7;0.42;0.7" dur="4.2s" repeatCount="indefinite" begin="2s"/></circle>
+    <circle cx="550" cy="30" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="630" cy="38" r="6" fill="url(#bulbGlow)" opacity="0.6"><animate attributeName="opacity" values="0.6;0.35;0.6" dur="3.6s" repeatCount="indefinite" begin="1.2s"/></circle>
+    <circle cx="630" cy="38" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+    <circle cx="700" cy="46" r="6" fill="url(#bulbGlow)" opacity="0.55"><animate attributeName="opacity" values="0.55;0.3;0.55" dur="3.4s" repeatCount="indefinite" begin="0.6s"/></circle>
+    <circle cx="700" cy="46" r="2.5" fill="#ffe4a8" opacity="0.9"/>
+  </g>
 
-  <!-- Screen ambient light on scene -->
-  <ellipse cx="430" cy="200" rx="200" ry="180" fill="url(#screenGlow)"/>
-
-  <!-- ======================== WINDOW (right side) ======================== -->
-  <rect x="680" y="30" width="170" height="140" rx="4" fill="url(#nightSky)" stroke="#2d333b" stroke-width="3"/>
-  <!-- Window cross frame -->
-  <line x1="765" y1="30" x2="765" y2="170" stroke="#2d333b" stroke-width="2.5"/>
-  <line x1="680" y1="100" x2="850" y2="100" stroke="#2d333b" stroke-width="2.5"/>
+  <!-- ======== WINDOW with snow ======== -->
+  <rect x="705" y="55" width="150" height="130" rx="5" fill="url(#nightSky)" stroke="#3a3228" stroke-width="3.5"/>
+  <!-- Window frame -->
+  <line x1="780" y1="55" x2="780" y2="185" stroke="#3a3228" stroke-width="3"/>
+  <line x1="705" y1="120" x2="855" y2="120" stroke="#3a3228" stroke-width="3"/>
+  <!-- Window sill -->
+  <rect x="700" y="183" width="160" height="7" rx="2" fill="#3a3228"/>
   <!-- Stars -->
-  <circle cx="710" cy="55" r="1.2" fill="#e8e8e8" opacity="0.8">
-    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="740" cy="75" r="0.8" fill="#e8e8e8" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="795" cy="50" r="1" fill="#e8e8e8" opacity="0.7">
-    <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="830" cy="70" r="0.7" fill="#e8e8e8" opacity="0.6">
-    <animate attributeName="opacity" values="0.6;0.1;0.6" dur="3.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="720" cy="120" r="1" fill="#e8e8e8" opacity="0.4">
-    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="810" cy="130" r="0.9" fill="#e8e8e8" opacity="0.5">
-    <animate attributeName="opacity" values="0.5;0.15;0.5" dur="4.2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="780" cy="145" r="0.6" fill="#e8e8e8" opacity="0.3">
-    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3.8s" repeatCount="indefinite"/>
-  </circle>
+  <circle cx="725" cy="75" r="1.3" fill="#e8e8e8" opacity="0.8"><animate attributeName="opacity" values="0.8;0.25;0.8" dur="3.2s" repeatCount="indefinite"/></circle>
+  <circle cx="750" cy="90" r="0.8" fill="#e8e8e8" opacity="0.5"><animate attributeName="opacity" values="0.5;0.15;0.5" dur="4.5s" repeatCount="indefinite"/></circle>
+  <circle cx="810" cy="70" r="1.1" fill="#e8e8e8" opacity="0.6"><animate attributeName="opacity" values="0.6;0.15;0.6" dur="2.8s" repeatCount="indefinite"/></circle>
+  <circle cx="840" cy="90" r="0.6" fill="#e8e8e8" opacity="0.4"><animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite"/></circle>
+  <circle cx="730" cy="140" r="0.7" fill="#e8e8e8" opacity="0.35"><animate attributeName="opacity" values="0.35;0.1;0.35" dur="5s" repeatCount="indefinite"/></circle>
+  <circle cx="820" cy="150" r="0.9" fill="#e8e8e8" opacity="0.45"><animate attributeName="opacity" values="0.45;0.1;0.45" dur="3.6s" repeatCount="indefinite"/></circle>
   <!-- Moon -->
-  <circle cx="820" cy="55" r="12" fill="#e8dcc8" opacity="0.9"/>
-  <circle cx="825" cy="52" r="10" fill="url(#nightSky)" opacity="0.8"/>
+  <circle cx="835" cy="78" r="14" fill="#ede2ce" opacity="0.9"/>
+  <circle cx="841" cy="74" r="11.5" fill="url(#nightSky)" opacity="0.85"/>
+  <!-- Moon glow -->
+  <circle cx="835" cy="78" r="22" fill="#ede2ce" opacity="0.04"/>
+  <!-- Snowflakes falling -->
+  <g fill="#fff" opacity="0.5">
+    <circle cx="720" cy="100" r="1"><animate attributeName="cy" values="65;175" dur="6s" repeatCount="indefinite"/><animate attributeName="cx" values="720;725" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.5;0.2" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="745" cy="80" r="0.7"><animate attributeName="cy" values="60;170" dur="5s" repeatCount="indefinite" begin="1s"/><animate attributeName="cx" values="745;740" dur="5s" repeatCount="indefinite" begin="1s"/></circle>
+    <circle cx="770" cy="95" r="0.9"><animate attributeName="cy" values="58;175" dur="7s" repeatCount="indefinite" begin="2s"/><animate attributeName="cx" values="770;775" dur="7s" repeatCount="indefinite" begin="2s"/></circle>
+    <circle cx="800" cy="85" r="0.8"><animate attributeName="cy" values="62;178" dur="5.5s" repeatCount="indefinite" begin="0.5s"/></circle>
+    <circle cx="825" cy="105" r="1"><animate attributeName="cy" values="65;172" dur="6.5s" repeatCount="indefinite" begin="1.5s"/><animate attributeName="cx" values="825;820" dur="6.5s" repeatCount="indefinite" begin="1.5s"/></circle>
+    <circle cx="845" cy="90" r="0.6"><animate attributeName="cy" values="60;180" dur="4.8s" repeatCount="indefinite" begin="3s"/></circle>
+    <circle cx="735" cy="130" r="0.7"><animate attributeName="cy" values="70;178" dur="5.2s" repeatCount="indefinite" begin="2.5s"/></circle>
+    <circle cx="810" cy="110" r="0.8"><animate attributeName="cy" values="68;176" dur="6.8s" repeatCount="indefinite" begin="0.8s"/></circle>
+  </g>
 
-  <!-- ======================== WALL ART / SHELF ======================== -->
-  <!-- Small shelf on wall -->
-  <rect x="60" y="68" width="120" height="6" rx="2" fill="#3d2b1f" stroke="#2a1d14" stroke-width="0.5"/>
-  <!-- Books on shelf -->
-  <rect x="70" y="32" width="14" height="36" rx="1" fill="url(#book1)"/>
-  <rect x="86" y="38" width="12" height="30" rx="1" fill="url(#book2)"/>
-  <rect x="100" y="35" width="15" height="33" rx="1" fill="url(#book3)"/>
-  <rect x="117" y="40" width="11" height="28" rx="1" fill="#39d353"/>
-  <rect x="130" y="36" width="13" height="32" rx="1" fill="#f78166"/>
-  <!-- Small plant on shelf -->
-  <rect x="150" y="52" width="16" height="16" rx="3" fill="#4a3728"/>
-  <ellipse cx="158" cy="48" rx="10" ry="8" fill="url(#leafGrad)"/>
-  <ellipse cx="152" cy="44" rx="6" ry="7" fill="url(#leafGrad2)"/>
-  <ellipse cx="164" cy="44" rx="5" ry="6" fill="#2ea043"/>
+  <!-- ======== SHELF with books (upper left) ======== -->
+  <rect x="55" y="82" width="135" height="7" rx="2" fill="url(#deskEdge)" stroke="#2a1d14" stroke-width="0.5"/>
+  <!-- Books -->
+  <rect x="63" y="40" width="15" height="42" rx="1.5" fill="url(#book1)"/>
+  <text x="70" y="68" text-anchor="middle" font-family="serif" font-size="4" fill="#fff" opacity="0.4" transform="rotate(-90 70 60)">Next.js</text>
+  <rect x="80" y="48" width="13" height="34" rx="1.5" fill="url(#book2)"/>
+  <rect x="95" y="44" width="16" height="38" rx="1.5" fill="url(#book3)"/>
+  <text x="103" y="68" text-anchor="middle" font-family="serif" font-size="4" fill="#fff" opacity="0.4" transform="rotate(-90 103 60)">Python</text>
+  <rect x="113" y="50" width="12" height="32" rx="1.5" fill="url(#book4)"/>
+  <rect x="127" y="46" width="14" height="36" rx="1.5" fill="url(#book5)"/>
+  <rect x="143" y="43" width="15" height="39" rx="1.5" fill="#8b5cf6"/>
+  <rect x="160" y="52" width="11" height="30" rx="1.5" fill="#58a6ff" opacity="0.7"/>
+  <!-- Bookend / small figure -->
+  <rect x="173" y="60" width="8" height="22" rx="2" fill="#484f58"/>
+  <circle cx="177" cy="57" r="4" fill="#484f58"/>
 
-  <!-- ======================== DESK ======================== -->
-  <!-- Desk surface -->
-  <rect x="50" y="255" width="560" height="16" rx="3" fill="url(#deskWood)" filter="url(#shadow)"/>
+  <!-- ======== POTTED PLANT (shelf) ======== -->
+  <rect x="60" y="68" width="14" height="14" rx="3" fill="#6d4a30"/>
+  <ellipse cx="67" cy="64" rx="9" ry="7" fill="url(#leafGrad)"/>
+  <ellipse cx="62" cy="60" rx="5" ry="6" fill="url(#leafGrad2)"/>
+  <ellipse cx="72" cy="61" rx="5" ry="5" fill="#2ea043"/>
+
+  <!-- ======== FRAMED ART on wall (small) ======== -->
+  <rect x="640" y="70" width="36" height="48" rx="2" fill="#161b22" stroke="#3a3228" stroke-width="2"/>
+  <!-- Little code/graph art inside frame -->
+  <polyline points="648,100 654,90 660,95 666,82" fill="none" stroke="#39d353" stroke-width="1.5" opacity="0.5"/>
+  <polyline points="648,102 656,96 662,99 668,88" fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.3"/>
+
+  <!-- ======== DESK ======== -->
+  <rect x="40" y="290" width="580" height="18" rx="3" fill="url(#deskEdge)" filter="url(#shadow)"/>
+  <!-- Wood grain lines -->
+  <line x1="60" y1="296" x2="600" y2="296" stroke="#5a4030" stroke-width="0.3" opacity="0.3"/>
+  <line x1="55" y1="300" x2="610" y2="300" stroke="#4a3425" stroke-width="0.3" opacity="0.2"/>
   <!-- Desk front panel -->
-  <rect x="55" y="271" width="550" height="100" rx="2" fill="#241a10" opacity="0.6"/>
+  <rect x="50" y="308" width="560" height="110" rx="2" fill="#1e1510" opacity="0.5"/>
   <!-- Desk legs -->
-  <rect x="70" y="271" width="12" height="129" fill="#3d2b1f"/>
-  <rect x="578" y="271" width="12" height="129" fill="#3d2b1f"/>
+  <rect x="65" y="308" width="14" height="142" fill="url(#deskWood)"/>
+  <rect x="581" y="308" width="14" height="142" fill="url(#deskWood)"/>
+  <!-- Rug visible on floor -->
+  <ellipse cx="330" cy="440" rx="280" ry="18" fill="url(#rugGrad)"/>
 
-  <!-- ======================== MONITOR ======================== -->
-  <!-- Monitor stand -->
-  <rect x="340" y="230" width="60" height="25" rx="2" fill="#2d333b"/>
-  <rect x="355" y="222" width="30" height="14" fill="#2d333b"/>
+  <!-- ======== MONITOR ======== -->
+  <!-- Stand base -->
+  <ellipse cx="370" cy="289" rx="35" ry="5" fill="#21262d"/>
+  <!-- Stand neck -->
+  <rect x="360" y="260" width="20" height="30" rx="2" fill="#2d333b"/>
   <!-- Monitor body -->
-  <rect x="260" y="100" width="220" height="128" rx="6" fill="#1c2028" stroke="#30363d" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="255" y="115" width="230" height="150" rx="8" fill="#1c2028" stroke="#30363d" stroke-width="2.5" filter="url(#shadow)"/>
   <!-- Screen -->
-  <rect x="270" y="108" width="200" height="108" rx="3" fill="#0d1117"/>
-  <!-- Screen reflection -->
-  <rect x="270" y="108" width="200" height="108" rx="3" fill="#58a6ff" opacity="0.02"/>
+  <rect x="266" y="124" width="208" height="128" rx="4" fill="#0d1117"/>
+  <!-- Screen subtle reflection -->
+  <rect x="266" y="124" width="208" height="40" rx="4" fill="#fff" opacity="0.012"/>
 
-  <!-- Code on screen -->
-  <g font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace" font-size="7">
-    <!-- Line numbers -->
-    <text x="276" y="122" fill="#484f58">1</text>
-    <text x="276" y="132" fill="#484f58">2</text>
-    <text x="276" y="142" fill="#484f58">3</text>
-    <text x="276" y="152" fill="#484f58">4</text>
-    <text x="276" y="162" fill="#484f58">5</text>
-    <text x="276" y="172" fill="#484f58">6</text>
-    <text x="276" y="182" fill="#484f58">7</text>
-    <text x="276" y="192" fill="#484f58">8</text>
-    <text x="276" y="202" fill="#484f58">9</text>
-    
-    <!-- Code line 1 -->
-    <text x="290" y="122" fill="#ff7b72">const</text>
-    <text x="315" y="122" fill="#c9d1d9">product</text>
-    <text x="352" y="122" fill="#ff7b72">=</text>
-    <text x="360" y="122" fill="#c9d1d9">{</text>
-    
-    <!-- Code line 2 -->
-    <text x="298" y="132" fill="#79c0ff">name</text>
-    <text x="318" y="132" fill="#c9d1d9">:</text>
-    <text x="325" y="132" fill="#a5d6ff">'Polish Rye'</text>
-    <text x="388" y="132" fill="#c9d1d9">,</text>
-    
-    <!-- Code line 3 -->
-    <text x="298" y="142" fill="#79c0ff">score</text>
-    <text x="323" y="142" fill="#c9d1d9">:</text>
-    <text x="330" y="142" fill="#79c0ff">calculateScore</text>
-    <text x="397" y="142" fill="#c9d1d9">(</text>
-    
-    <!-- Code line 4 -->
-    <text x="306" y="152" fill="#79c0ff">factors</text>
-    <text x="342" y="152" fill="#c9d1d9">,</text>
-    <text x="348" y="152" fill="#79c0ff">weights</text>
-    
-    <!-- Code line 5 -->
-    <text x="298" y="162" fill="#c9d1d9">),</text>
-    
-    <!-- Code line 6 -->
-    <text x="298" y="172" fill="#79c0ff">ean</text>
-    <text x="315" y="172" fill="#c9d1d9">:</text>
-    <text x="322" y="172" fill="#a5d6ff">'5901234123457'</text>
-    <text x="400" y="172" fill="#c9d1d9">,</text>
-    
-    <!-- Code line 7 -->
-    <text x="298" y="182" fill="#79c0ff">verified</text>
-    <text x="340" y="182" fill="#c9d1d9">:</text>
-    <text x="347" y="182" fill="#ff7b72">true</text>
-    
-    <!-- Code line 8 -->
-    <text x="290" y="192" fill="#c9d1d9">};</text>
-    
-    <!-- Code line 9 - cursor blinking -->
-    <text x="290" y="202" fill="#484f58">|</text>
-    <rect x="290" y="196" width="5" height="8" fill="#58a6ff" rx="1">
-      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
-    </rect>
-  </g>
-
-  <!-- Monitor power LED -->
-  <circle cx="370" cy="223" r="1.5" fill="#39d353">
-    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- ======================== KEYBOARD ======================== -->
-  <rect x="300" y="260" width="120" height="30" rx="3" fill="#21262d" stroke="#30363d" stroke-width="1"/>
-  <!-- Keyboard keys (simplified rows) -->
-  <g fill="#2d333b" stroke="#3d444d" stroke-width="0.3">
-    <rect x="305" y="264" width="8" height="6" rx="1"/>
-    <rect x="315" y="264" width="8" height="6" rx="1"/>
-    <rect x="325" y="264" width="8" height="6" rx="1"/>
-    <rect x="335" y="264" width="8" height="6" rx="1"/>
-    <rect x="345" y="264" width="8" height="6" rx="1"/>
-    <rect x="355" y="264" width="8" height="6" rx="1"/>
-    <rect x="365" y="264" width="8" height="6" rx="1"/>
-    <rect x="375" y="264" width="8" height="6" rx="1"/>
-    <rect x="385" y="264" width="8" height="6" rx="1"/>
-    <rect x="395" y="264" width="8" height="6" rx="1"/>
-    <rect x="405" y="264" width="8" height="6" rx="1"/>
-    <!-- Row 2 -->
-    <rect x="308" y="272" width="8" height="6" rx="1"/>
-    <rect x="318" y="272" width="8" height="6" rx="1"/>
-    <rect x="328" y="272" width="8" height="6" rx="1"/>
-    <rect x="338" y="272" width="8" height="6" rx="1"/>
-    <rect x="348" y="272" width="8" height="6" rx="1"/>
-    <rect x="358" y="272" width="8" height="6" rx="1"/>
-    <rect x="368" y="272" width="8" height="6" rx="1"/>
-    <rect x="378" y="272" width="8" height="6" rx="1"/>
-    <rect x="388" y="272" width="8" height="6" rx="1"/>
-    <rect x="398" y="272" width="8" height="6" rx="1"/>
-    <!-- Spacebar -->
-    <rect x="325" y="280" width="70" height="6" rx="2"/>
-  </g>
-
-  <!-- ======================== COFFEE MUG ======================== -->
-  <rect x="242" y="235" width="22" height="20" rx="3" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
-  <!-- Handle -->
-  <path d="M 264 240 Q 274 240 274 248 Q 274 254 264 254" fill="none" stroke="#555" stroke-width="1.5"/>
-  <!-- Coffee surface -->
-  <ellipse cx="253" cy="237" rx="9" ry="2" fill="url(#coffeeGrad)"/>
-  <!-- Steam -->
-  <path d="M 248 232 Q 245 225 250 220" fill="none" stroke="#8b949e" stroke-width="0.8" opacity="0.4">
-    <animate attributeName="d" values="M 248 232 Q 245 225 250 220;M 248 232 Q 251 225 248 218;M 248 232 Q 245 225 250 220" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.4;0.15;0.4" dur="3s" repeatCount="indefinite"/>
-  </path>
-  <path d="M 255 232 Q 258 224 254 217" fill="none" stroke="#8b949e" stroke-width="0.8" opacity="0.3">
-    <animate attributeName="d" values="M 255 232 Q 258 224 254 217;M 255 232 Q 252 224 256 215;M 255 232 Q 258 224 254 217" dur="3.5s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="3.5s" repeatCount="indefinite"/>
-  </path>
-
-  <!-- ======================== DESK PLANT (left) ======================== -->
-  <!-- Pot -->
-  <path d="M 82 255 L 78 228 L 118 228 L 114 255 Z" fill="#8b5e3c" stroke="#6d4a30" stroke-width="1"/>
-  <rect x="75" y="222" width="46" height="8" rx="3" fill="#8b5e3c" stroke="#6d4a30" stroke-width="0.5"/>
-  <!-- Soil -->
-  <ellipse cx="98" cy="226" rx="18" ry="3" fill="#3d2b1f"/>
-  <!-- Plant leaves -->
-  <path d="M 98 222 Q 80 190 70 170" fill="none" stroke="#2ea043" stroke-width="2"/>
-  <ellipse cx="68" cy="168" rx="12" ry="7" fill="url(#leafGrad)" transform="rotate(-30 68 168)"/>
-  <path d="M 98 222 Q 88 195 95 165" fill="none" stroke="#238636" stroke-width="2"/>
-  <ellipse cx="95" cy="162" rx="10" ry="6" fill="url(#leafGrad2)" transform="rotate(5 95 162)"/>
-  <path d="M 98 222 Q 110 195 125 175" fill="none" stroke="#2ea043" stroke-width="2"/>
-  <ellipse cx="127" cy="173" rx="11" ry="6.5" fill="url(#leafGrad)" transform="rotate(25 127 173)"/>
-  <path d="M 98 222 Q 105 200 118 190" fill="none" stroke="#196c2e" stroke-width="1.5"/>
-  <ellipse cx="120" cy="188" rx="8" ry="5" fill="url(#leafGrad2)" transform="rotate(35 120 188)"/>
-  <path d="M 98 222 Q 85 200 75 190" fill="none" stroke="#196c2e" stroke-width="1.5"/>
-  <ellipse cx="73" cy="188" rx="9" ry="5" fill="#2ea043" transform="rotate(-25 73 188)"/>
-  <!-- Small drooping leaf -->
-  <path d="M 98 222 Q 100 208 110 205" fill="none" stroke="#39d353" stroke-width="1"/>
-  <ellipse cx="112" cy="204" rx="6" ry="3.5" fill="#39d353" transform="rotate(15 112 204)"/>
-
-  <!-- ======================== CHARACTER ======================== -->
-  <g transform="translate(350, 135)">
-    <!-- Body / Sweater -->
-    <path d="M -30 80 Q -45 85 -55 110 L -50 125 L 50 125 L 55 110 Q 45 85 30 80 Q 15 72 0 72 Q -15 72 -30 80" fill="url(#sweaterGrad)" stroke="#1a1c24" stroke-width="0.5"/>
-    
-    <!-- Sweater collar / white t-shirt visible -->
-    <path d="M -8 72 Q 0 78 8 72" fill="#d4d4d4" stroke="none"/>
-    
-    <!-- Zipper line -->
-    <line x1="0" y1="74" x2="0" y2="125" stroke="#484f58" stroke-width="1" stroke-dasharray="2,3"/>
-    <!-- Zipper pull -->
-    <rect x="-2" y="80" width="4" height="5" rx="1" fill="#6e7681"/>
-    
-    <!-- Neck -->
-    <rect x="-8" y="62" width="16" height="14" rx="3" fill="url(#skinTone)"/>
-    
-    <!-- Head -->
-    <ellipse cx="0" cy="40" rx="28" ry="30" fill="url(#skinTone)"/>
-    
-    <!-- Ears -->
-    <ellipse cx="-27" cy="42" rx="5" ry="7" fill="#c49660"/>
-    <ellipse cx="27" cy="42" rx="5" ry="7" fill="#c49660"/>
-    
-    <!-- Hair (curly dark hair) -->
-    <g fill="#1a1a1a">
-      <!-- Main hair mass on top -->
-      <ellipse cx="0" cy="16" rx="28" ry="14" fill="#1a1a1a"/>
-      <!-- Curly bits -->
-      <circle cx="-20" cy="12" r="7" fill="#222"/>
-      <circle cx="-10" cy="8" r="8" fill="#1a1a1a"/>
-      <circle cx="2" cy="6" r="8" fill="#222"/>
-      <circle cx="14" cy="8" r="7" fill="#1a1a1a"/>
-      <circle cx="22" cy="12" r="6" fill="#222"/>
-      <circle cx="-16" cy="6" r="5" fill="#2a2a2a"/>
-      <circle cx="8" cy="5" r="6" fill="#2a2a2a"/>
-      <circle cx="-24" cy="18" r="5" fill="#222"/>
-      <circle cx="24" cy="18" r="5" fill="#222"/>
-      <!-- Side hair -->
-      <ellipse cx="-27" cy="30" rx="5" ry="8" fill="#1a1a1a"/>
-      <ellipse cx="27" cy="30" rx="5" ry="8" fill="#1a1a1a"/>
-      <!-- Forehead curls -->
-      <circle cx="-6" cy="11" r="5" fill="#2a2a2a"/>
-      <circle cx="-18" cy="14" r="4" fill="#2a2a2a"/>
-      <circle cx="18" cy="14" r="4" fill="#2a2a2a"/>
+  <!-- ======= TOOL ICONS ON MONITOR (4x3 grid) ======= -->
+  <g transform="translate(290, 140)">
+    <!-- Row 1 -->
+    <!-- VS Code icon -->
+    <g transform="translate(0,0)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <path d="M 8 8 L 24 4 L 24 28 L 8 24 L 16 16 Z" fill="#007ACC" opacity="0.8"/>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">VS Code</text>
     </g>
-    
-    <!-- Eyebrows -->
-    <path d="M -16 30 Q -11 27 -6 30" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
-    <path d="M 6 30 Q 11 27 16 30" fill="none" stroke="#2a2a2a" stroke-width="1.8" stroke-linecap="round"/>
-    
-    <!-- Glasses frame -->
-    <g fill="none" stroke="#1a1a1a" stroke-width="2">
-      <rect x="-20" y="33" width="17" height="12" rx="3"/>
-      <rect x="3" y="33" width="17" height="12" rx="3"/>
+    <!-- GitHub icon -->
+    <g transform="translate(44,0)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <circle cx="16" cy="14" r="8" fill="#fff" opacity="0.85"/>
+      <circle cx="16" cy="14" r="3" fill="#1e1e1e"/>
+      <ellipse cx="16" cy="22" rx="5" ry="3" fill="#fff" opacity="0.85"/>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">GitHub</text>
+    </g>
+    <!-- Copilot icon -->
+    <g transform="translate(88,0)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <!-- Simplified copilot dual-ring -->
+      <circle cx="12" cy="14" r="5" fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+      <circle cx="20" cy="14" r="5" fill="none" stroke="#bc8cff" stroke-width="1.5"/>
+      <circle cx="12" cy="14" r="1.5" fill="#58a6ff"/>
+      <circle cx="20" cy="14" r="1.5" fill="#bc8cff"/>
+      <path d="M 10 22 Q 16 26 22 22" fill="none" stroke="#8b949e" stroke-width="1" stroke-linecap="round"/>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">Copilot</text>
+    </g>
+    <!-- Next.js icon -->
+    <g transform="translate(132,0)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <circle cx="16" cy="16" r="10" fill="#000" stroke="#fff" stroke-width="1"/>
+      <text x="16" y="19" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#fff">N</text>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">Next.js</text>
+    </g>
+
+    <!-- Row 2 -->
+    <!-- Supabase icon -->
+    <g transform="translate(0,50)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <path d="M 16 6 L 8 18 L 16 16 L 24 18 Z" fill="#3FCF8E" opacity="0.8"/>
+      <path d="M 16 26 L 24 14 L 16 16 L 8 14 Z" fill="#3FCF8E" opacity="0.5"/>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">Supabase</text>
+    </g>
+    <!-- Python icon -->
+    <g transform="translate(44,50)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <text x="16" y="20" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#3776AB">λ</text>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">Python</text>
+    </g>
+    <!-- PostgreSQL icon -->
+    <g transform="translate(88,50)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <ellipse cx="16" cy="12" rx="8" ry="6" fill="none" stroke="#336791" stroke-width="1.5"/>
+      <line x1="16" y1="18" x2="16" y2="26" stroke="#336791" stroke-width="1.5"/>
+      <ellipse cx="16" cy="26" rx="4" ry="2" fill="none" stroke="#336791" stroke-width="1"/>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">PgSQL</text>
+    </g>
+    <!-- Vercel icon -->
+    <g transform="translate(132,50)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#1e1e1e" stroke="#333" stroke-width="0.5"/>
+      <polygon points="16,8 6,24 26,24" fill="#fff" opacity="0.85"/>
+      <text x="16" y="38" text-anchor="middle" font-family="'Inter', sans-serif" font-size="5" fill="#6e7681">Vercel</text>
+    </g>
+  </g>
+  <!-- Subtle status bar on screen bottom -->
+  <rect x="266" y="244" width="208" height="8" fill="#161b22"/>
+  <rect x="268" y="246" width="12" height="4" rx="1" fill="#39d353" opacity="0.4"/>
+  <rect x="283" y="246" width="25" height="4" rx="1" fill="#58a6ff" opacity="0.3"/>
+  <!-- Monitor power LED -->
+  <circle cx="370" cy="258" r="1.5" fill="#39d353"><animate attributeName="opacity" values="0.8;0.35;0.8" dur="3s" repeatCount="indefinite"/></circle>
+
+  <!-- ======== KEYBOARD ======== -->
+  <rect x="295" y="296" width="130" height="34" rx="4" fill="#21262d" stroke="#30363d" stroke-width="0.8" filter="url(#lightShadow)"/>
+  <g fill="#2d333b" stroke="#3d444d" stroke-width="0.3">
+    <rect x="301" y="300" width="9" height="6" rx="1"/><rect x="312" y="300" width="9" height="6" rx="1"/><rect x="323" y="300" width="9" height="6" rx="1"/><rect x="334" y="300" width="9" height="6" rx="1"/><rect x="345" y="300" width="9" height="6" rx="1"/><rect x="356" y="300" width="9" height="6" rx="1"/><rect x="367" y="300" width="9" height="6" rx="1"/><rect x="378" y="300" width="9" height="6" rx="1"/><rect x="389" y="300" width="9" height="6" rx="1"/><rect x="400" y="300" width="9" height="6" rx="1"/><rect x="411" y="300" width="9" height="6" rx="1"/>
+    <rect x="304" y="308" width="9" height="6" rx="1"/><rect x="315" y="308" width="9" height="6" rx="1"/><rect x="326" y="308" width="9" height="6" rx="1"/><rect x="337" y="308" width="9" height="6" rx="1"/><rect x="348" y="308" width="9" height="6" rx="1"/><rect x="359" y="308" width="9" height="6" rx="1"/><rect x="370" y="308" width="9" height="6" rx="1"/><rect x="381" y="308" width="9" height="6" rx="1"/><rect x="392" y="308" width="9" height="6" rx="1"/><rect x="403" y="308" width="9" height="6" rx="1"/>
+    <rect x="330" y="316" width="60" height="7" rx="2"/><!-- spacebar -->
+    <rect x="310" y="316" width="9" height="6" rx="1"/><rect x="398" y="316" width="9" height="6" rx="1"/>
+  </g>
+
+  <!-- ======== MOUSE ======== -->
+  <ellipse cx="440" cy="305" rx="8" ry="12" fill="#21262d" stroke="#30363d" stroke-width="0.8"/>
+  <line x1="440" y1="296" x2="440" y2="302" stroke="#3d444d" stroke-width="0.5"/>
+
+  <!-- ======== COFFEE MUG ======== -->
+  <g transform="translate(230, 268)">
+    <rect x="0" y="0" width="24" height="22" rx="4" fill="#3d3d3d" stroke="#555" stroke-width="1"/>
+    <path d="M 24 4 Q 34 4 34 12 Q 34 18 24 18" fill="none" stroke="#555" stroke-width="1.8"/>
+    <ellipse cx="12" cy="2" rx="10" ry="2.5" fill="url(#coffeeGrad)"/>
+    <!-- Heart on mug -->
+    <path d="M 8 11 Q 8 8 12 10 Q 16 8 16 11 Q 16 15 12 17 Q 8 15 8 11" fill="#f78166" opacity="0.5"/>
+    <!-- Steam -->
+    <path d="M 7 -3 Q 4 -10 9 -16" fill="none" stroke="#8b949e" stroke-width="0.7" opacity="0.35"><animate attributeName="d" values="M 7 -3 Q 4 -10 9 -16;M 7 -3 Q 10 -10 7 -18;M 7 -3 Q 4 -10 9 -16" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.35;0.12;0.35" dur="3s" repeatCount="indefinite"/></path>
+    <path d="M 14 -3 Q 17 -9 13 -15" fill="none" stroke="#8b949e" stroke-width="0.7" opacity="0.25"><animate attributeName="d" values="M 14 -3 Q 17 -9 13 -15;M 14 -3 Q 11 -9 15 -17;M 14 -3 Q 17 -9 13 -15" dur="3.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.08;0.25" dur="3.8s" repeatCount="indefinite"/></path>
+  </g>
+
+  <!-- ======== HEADPHONES on desk ======== -->
+  <g transform="translate(480, 275)">
+    <path d="M 0 12 Q 0 -2 15 -2 Q 30 -2 30 12" fill="none" stroke="#484f58" stroke-width="3" stroke-linecap="round"/>
+    <ellipse cx="2" cy="14" rx="5" ry="7" fill="#2d333b" stroke="#484f58" stroke-width="1"/>
+    <ellipse cx="28" cy="14" rx="5" ry="7" fill="#2d333b" stroke="#484f58" stroke-width="1"/>
+    <!-- Cushion accent -->
+    <ellipse cx="2" cy="14" rx="3" ry="5" fill="#3d444d"/>
+    <ellipse cx="28" cy="14" rx="3" ry="5" fill="#3d444d"/>
+  </g>
+
+  <!-- ======== DESK PLANT (large, left) ======== -->
+  <g transform="translate(80, 170)">
+    <path d="M -8 120 L -12 90 L 22 90 L 18 120 Z" fill="#8b5e3c" stroke="#6d4a30" stroke-width="1"/>
+    <rect x="-15" y="85" width="40" height="7" rx="3" fill="#8b5e3c" stroke="#6d4a30" stroke-width="0.5"/>
+    <ellipse cx="5" cy="88" rx="16" ry="3" fill="#3d2b1f"/>
+    <!-- Leaves -->
+    <path d="M 5 85 Q -15 55 -25 30" fill="none" stroke="#2ea043" stroke-width="2.2"/>
+    <ellipse cx="-27" cy="27" rx="13" ry="8" fill="url(#leafGrad)" transform="rotate(-30 -27 27)"/>
+    <path d="M 5 85 Q -5 60 2 30" fill="none" stroke="#238636" stroke-width="2"/>
+    <ellipse cx="2" cy="26" rx="11" ry="7" fill="url(#leafGrad2)" transform="rotate(5 2 26)"/>
+    <path d="M 5 85 Q 20 58 35 38" fill="none" stroke="#2ea043" stroke-width="2.2"/>
+    <ellipse cx="37" cy="35" rx="12" ry="7" fill="url(#leafGrad)" transform="rotate(28 37 35)"/>
+    <path d="M 5 85 Q 15 65 28 55" fill="none" stroke="#196c2e" stroke-width="1.5"/>
+    <ellipse cx="30" cy="52" rx="9" ry="5.5" fill="url(#leafGrad2)" transform="rotate(35 30 52)"/>
+    <path d="M 5 85 Q -10 65 -18 55" fill="none" stroke="#196c2e" stroke-width="1.5"/>
+    <ellipse cx="-20" cy="52" rx="10" ry="5" fill="#2ea043" transform="rotate(-22 -20 52)"/>
+    <path d="M 5 85 Q 10 72 18 68" fill="none" stroke="#39d353" stroke-width="1.2"/>
+    <ellipse cx="20" cy="66" rx="7" ry="4" fill="#39d353" transform="rotate(18 20 66)"/>
+    <!-- Drooping leaf -->
+    <path d="M 5 85 Q -3 78 -15 80" fill="none" stroke="#39d353" stroke-width="1"/>
+    <ellipse cx="-17" cy="79" rx="6" ry="3" fill="#39d353" transform="rotate(-10 -17 79)"/>
+  </g>
+
+  <!-- ======== DESK LAMP ======== -->
+  <g transform="translate(172, 145)">
+    <ellipse cx="0" cy="147" rx="20" ry="4" fill="#2d333b"/>
+    <line x1="0" y1="143" x2="-5" y2="75" stroke="#484f58" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-5" y1="75" x2="15" y2="50" stroke="#484f58" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 5 50 L -10 22 L 40 22 L 25 50 Z" fill="#2d333b" stroke="#3d444d" stroke-width="1"/>
+    <ellipse cx="15" cy="40" rx="14" ry="10" fill="#ffb347" opacity="0.25"><animate attributeName="opacity" values="0.25;0.15;0.25" dur="4s" repeatCount="indefinite"/></ellipse>
+    <circle cx="15" cy="30" r="4" fill="#ffe4a8" opacity="0.7"/>
+  </g>
+
+  <!-- ======== CHARACTER (the cartoon you) ======== -->
+  <g transform="translate(355, 148)">
+    <!-- === BODY / SWEATER === -->
+    <!-- Shoulders wider, quarter-zip sweater -->
+    <path d="M -38 80 Q -52 86 -62 115 L -56 135 L 56 135 L 62 115 Q 52 86 38 80 Q 20 70 0 70 Q -20 70 -38 80" fill="url(#sweaterGrad)" stroke="#1a1c24" stroke-width="0.5"/>
+    <!-- Sweater fold lines -->
+    <path d="M -30 95 Q -25 100 -28 110" fill="none" stroke="#15171f" stroke-width="0.5" opacity="0.4"/>
+    <path d="M 30 95 Q 25 100 28 110" fill="none" stroke="#15171f" stroke-width="0.5" opacity="0.4"/>
+    <!-- White t-shirt showing at collar -->
+    <path d="M -10 70 Q -5 66 0 67 Q 5 66 10 70" fill="#ddd" stroke="none"/>
+    <path d="M -10 70 Q 0 76 10 70" fill="#ccc" stroke="none"/>
+    <!-- Zipper -->
+    <line x1="0" y1="70" x2="0" y2="135" stroke="#484f58" stroke-width="1.2"/>
+    <!-- Zipper teeth -->
+    <g stroke="#5a6070" stroke-width="0.4" opacity="0.5">
+      <line x1="-2" y1="80" x2="2" y2="80"/><line x1="-2" y1="85" x2="2" y2="85"/><line x1="-2" y1="90" x2="2" y2="90"/><line x1="-2" y1="95" x2="2" y2="95"/><line x1="-2" y1="100" x2="2" y2="100"/><line x1="-2" y1="105" x2="2" y2="105"/><line x1="-2" y1="110" x2="2" y2="110"/><line x1="-2" y1="115" x2="2" y2="115"/>
+    </g>
+    <!-- Zipper pull -->
+    <rect x="-3" y="76" width="6" height="7" rx="1.5" fill="#6e7681" stroke="#8b949e" stroke-width="0.3"/>
+    <line x1="0" y1="83" x2="0" y2="87" stroke="#6e7681" stroke-width="1"/>
+
+    <!-- === NECK === -->
+    <rect x="-10" y="58" width="20" height="16" rx="4" fill="url(#skinTone)"/>
+
+    <!-- === HEAD === -->
+    <!-- Slightly wider face -->
+    <ellipse cx="0" cy="34" rx="30" ry="32" fill="url(#skinTone)"/>
+    <!-- Slight jaw definition -->
+    <path d="M -22 48 Q -15 60 0 62 Q 15 60 22 48" fill="url(#skinTone)" stroke="none"/>
+
+    <!-- === EARS === -->
+    <ellipse cx="-29" cy="38" rx="5" ry="7.5" fill="#c49660"/>
+    <ellipse cx="-29" cy="38" rx="3" ry="5" fill="#b88550" opacity="0.3"/>
+    <ellipse cx="29" cy="38" rx="5" ry="7.5" fill="#c49660"/>
+    <ellipse cx="29" cy="38" rx="3" ry="5" fill="#b88550" opacity="0.3"/>
+
+    <!-- === HAIR (tight curly, short) === -->
+    <g fill="#1a1a1a">
+      <!-- Main hair cap -->
+      <ellipse cx="0" cy="10" rx="30" ry="16" fill="#151515"/>
+      <!-- Individual curls - tighter, more defined -->
+      <circle cx="-22" cy="8" r="6" fill="#1a1a1a"/>
+      <circle cx="-14" cy="4" r="6.5" fill="#181818"/>
+      <circle cx="-4" cy="2" r="7" fill="#1a1a1a"/>
+      <circle cx="8" cy="3" r="6.5" fill="#181818"/>
+      <circle cx="18" cy="6" r="6" fill="#1a1a1a"/>
+      <circle cx="24" cy="10" r="5.5" fill="#181818"/>
+      <circle cx="-26" cy="14" r="5" fill="#1a1a1a"/>
+      <circle cx="26" cy="14" r="5" fill="#1a1a1a"/>
+      <!-- Extra curl definition -->
+      <circle cx="-10" cy="6" r="4" fill="#222"/>
+      <circle cx="2" cy="4" r="4.5" fill="#222"/>
+      <circle cx="14" cy="5" r="4" fill="#222"/>
+      <circle cx="-18" cy="10" r="3.5" fill="#222"/>
+      <circle cx="-6" cy="3" r="3" fill="#252525"/>
+      <circle cx="10" cy="2" r="3" fill="#252525"/>
+      <!-- Side hair -->
+      <ellipse cx="-29" cy="26" rx="4.5" ry="8" fill="#1a1a1a"/>
+      <ellipse cx="29" cy="26" rx="4.5" ry="8" fill="#1a1a1a"/>
+      <!-- Forehead curls -->
+      <circle cx="-16" cy="12" r="3.5" fill="#222"/>
+      <circle cx="0" cy="9" r="3.5" fill="#252525"/>
+      <circle cx="16" cy="12" r="3.5" fill="#222"/>
+      <!-- Highlights -->
+      <circle cx="-8" cy="5" r="2" fill="#2a2a2a"/>
+      <circle cx="6" cy="4" r="2" fill="#2a2a2a"/>
+    </g>
+
+    <!-- === EYEBROWS (thicker, expressive) === -->
+    <path d="M -18 26 Q -12 22 -6 26" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M 6 26 Q 12 22 18 26" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+
+    <!-- === GLASSES (bigger, rounder frames) === -->
+    <g fill="none" stroke="#1a1a1a" stroke-width="2.5">
+      <rect x="-22" y="29" width="19" height="15" rx="4"/>
+      <rect x="3" y="29" width="19" height="15" rx="4"/>
       <!-- Bridge -->
-      <path d="M -3 38 Q 0 36 3 38"/>
+      <path d="M -3 35 Q 0 32 3 35" stroke-width="2"/>
       <!-- Temple arms -->
-      <line x1="-20" y1="36" x2="-27" y2="35"/>
-      <line x1="20" y1="36" x2="27" y2="35"/>
+      <line x1="-22" y1="34" x2="-29" y2="32" stroke-width="2"/>
+      <line x1="22" y1="34" x2="29" y2="32" stroke-width="2"/>
     </g>
     <!-- Lens reflection -->
-    <rect x="-17" y="35" width="3" height="2" rx="0.5" fill="#fff" opacity="0.15"/>
-    <rect x="6" y="35" width="3" height="2" rx="0.5" fill="#fff" opacity="0.15"/>
-    
-    <!-- Eyes -->
-    <ellipse cx="-11" cy="39" rx="3" ry="3" fill="#2a1a0a"/>
-    <ellipse cx="11" cy="39" rx="3" ry="3" fill="#2a1a0a"/>
+    <rect x="-19" y="31" width="4" height="2.5" rx="1" fill="#fff" opacity="0.12"/>
+    <rect x="6" y="31" width="4" height="2.5" rx="1" fill="#fff" opacity="0.12"/>
+
+    <!-- === EYES (warm, friendly) === -->
+    <ellipse cx="-12" cy="36" rx="3.5" ry="3.5" fill="#2a1a0a"/>
+    <ellipse cx="12" cy="36" rx="3.5" ry="3.5" fill="#2a1a0a"/>
     <!-- Eye highlights -->
-    <circle cx="-10" cy="38" r="1" fill="#fff" opacity="0.7"/>
-    <circle cx="12" cy="38" r="1" fill="#fff" opacity="0.7"/>
-    
-    <!-- Nose -->
-    <path d="M 0 40 Q 2 46 0 48" fill="none" stroke="#b8875c" stroke-width="1" stroke-linecap="round"/>
-    
-    <!-- Smile -->
-    <path d="M -10 52 Q -5 59 0 59 Q 5 59 10 52" fill="none" stroke="#8b5e3c" stroke-width="1.5" stroke-linecap="round"/>
-    <!-- Teeth hint -->
-    <path d="M -7 53 Q 0 60 7 53" fill="#fff" opacity="0.9"/>
-    
-    <!-- Stubble dots -->
-    <g fill="#8b7355" opacity="0.25">
-      <circle cx="-14" cy="55" r="0.5"/>
-      <circle cx="-12" cy="57" r="0.5"/>
-      <circle cx="-10" cy="59" r="0.4"/>
-      <circle cx="-8" cy="56" r="0.5"/>
-      <circle cx="14" cy="55" r="0.5"/>
-      <circle cx="12" cy="57" r="0.5"/>
-      <circle cx="10" cy="59" r="0.4"/>
-      <circle cx="8" cy="56" r="0.5"/>
-      <circle cx="-6" cy="61" r="0.4"/>
-      <circle cx="-3" cy="62" r="0.4"/>
-      <circle cx="0" cy="63" r="0.4"/>
-      <circle cx="3" cy="62" r="0.4"/>
-      <circle cx="6" cy="61" r="0.4"/>
+    <circle cx="-10.5" cy="35" r="1.3" fill="#fff" opacity="0.75"/>
+    <circle cx="13.5" cy="35" r="1.3" fill="#fff" opacity="0.75"/>
+    <!-- Smaller secondary highlight -->
+    <circle cx="-13" cy="37" r="0.6" fill="#fff" opacity="0.4"/>
+    <circle cx="11" cy="37" r="0.6" fill="#fff" opacity="0.4"/>
+
+    <!-- === NOSE === -->
+    <path d="M 0 38 Q 3 44 1 47 Q -1 48 -2 47" fill="none" stroke="#b8875c" stroke-width="1.2" stroke-linecap="round"/>
+
+    <!-- === BIG SMILE with teeth === -->
+    <path d="M -13 50 Q -7 59 0 59 Q 7 59 13 50" fill="#fff" opacity="0.95"/>
+    <!-- Lip outline -->
+    <path d="M -13 50 Q -7 59 0 59 Q 7 59 13 50" fill="none" stroke="#8b5e3c" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Tooth line -->
+    <line x1="-3" y1="51" x2="-3" y2="56" stroke="#e0d8d0" stroke-width="0.3" opacity="0.3"/>
+    <line x1="3" y1="51" x2="3" y2="56" stroke="#e0d8d0" stroke-width="0.3" opacity="0.3"/>
+    <line x1="0" y1="50" x2="0" y2="57" stroke="#e0d8d0" stroke-width="0.3" opacity="0.3"/>
+    <!-- Lower lip hint -->
+    <path d="M -8 57 Q 0 61 8 57" fill="none" stroke="#b8875c" stroke-width="0.6" opacity="0.4"/>
+
+    <!-- === STUBBLE === -->
+    <g fill="#8b7355" opacity="0.2">
+      <circle cx="-16" cy="52" r="0.5"/><circle cx="-14" cy="54" r="0.5"/><circle cx="-12" cy="56" r="0.4"/><circle cx="-10" cy="53" r="0.5"/>
+      <circle cx="16" cy="52" r="0.5"/><circle cx="14" cy="54" r="0.5"/><circle cx="12" cy="56" r="0.4"/><circle cx="10" cy="53" r="0.5"/>
+      <circle cx="-8" cy="60" r="0.4"/><circle cx="-4" cy="61" r="0.4"/><circle cx="0" cy="62" r="0.4"/><circle cx="4" cy="61" r="0.4"/><circle cx="8" cy="60" r="0.4"/>
+      <circle cx="-15" cy="49" r="0.3"/><circle cx="15" cy="49" r="0.3"/>
+      <circle cx="-18" cy="46" r="0.3"/><circle cx="18" cy="46" r="0.3"/>
+      <circle cx="-2" cy="63" r="0.3"/><circle cx="2" cy="63" r="0.3"/>
     </g>
-    
-    <!-- Arms going to keyboard -->
-    <!-- Left arm -->
-    <path d="M -40 105 Q -55 112 -50 125 Q -45 138 -10 130" fill="url(#sweaterGrad)" stroke="#1a1c24" stroke-width="0.5"/>
-    <!-- Right arm -->
-    <path d="M 40 105 Q 55 112 50 125 Q 45 138 10 130" fill="url(#sweaterGrad)" stroke="#1a1c24" stroke-width="0.5"/>
-    
-    <!-- Hands on keyboard -->
-    <ellipse cx="-12" cy="130" rx="10" ry="5" fill="url(#skinTone)" transform="rotate(-5 -12 130)"/>
-    <ellipse cx="12" cy="130" rx="10" ry="5" fill="url(#skinTone)" transform="rotate(5 12 130)"/>
-    <!-- Finger separation hints -->
-    <line x1="-16" y1="128" x2="-16" y2="132" stroke="#b8875c" stroke-width="0.3" opacity="0.4"/>
-    <line x1="-12" y1="127" x2="-12" y2="131" stroke="#b8875c" stroke-width="0.3" opacity="0.4"/>
-    <line x1="-8" y1="128" x2="-8" y2="132" stroke="#b8875c" stroke-width="0.3" opacity="0.4"/>
-    <line x1="16" y1="128" x2="16" y2="132" stroke="#b8875c" stroke-width="0.3" opacity="0.4"/>
-    <line x1="12" y1="127" x2="12" y2="131" stroke="#b8875c" stroke-width="0.3" opacity="0.4"/>
-    <line x1="8" y1="128" x2="8" y2="132" stroke="#b8875c" stroke-width="0.3" opacity="0.4"/>
+
+    <!-- === ARMS reaching to keyboard === -->
+    <path d="M -48 108 Q -62 115 -56 135 Q -48 148 -15 140" fill="url(#sweaterGrad)" stroke="#1a1c24" stroke-width="0.5"/>
+    <path d="M 48 108 Q 62 115 56 135 Q 48 148 15 140" fill="url(#sweaterGrad)" stroke="#1a1c24" stroke-width="0.5"/>
+    <!-- Sleeve ribbing -->
+    <path d="M -20 137 Q -17 135 -14 137" fill="none" stroke="#15171f" stroke-width="0.5" opacity="0.3"/>
+    <path d="M 14 137 Q 17 135 20 137" fill="none" stroke="#15171f" stroke-width="0.5" opacity="0.3"/>
+
+    <!-- === HANDS === -->
+    <ellipse cx="-15" cy="142" rx="11" ry="5.5" fill="url(#skinTone)" transform="rotate(-3 -15 142)"/>
+    <ellipse cx="15" cy="142" rx="11" ry="5.5" fill="url(#skinTone)" transform="rotate(3 15 142)"/>
+    <!-- Finger lines -->
+    <g stroke="#b8875c" stroke-width="0.35" opacity="0.35">
+      <line x1="-20" y1="140" x2="-20" y2="144"/><line x1="-15" y1="139" x2="-15" y2="143"/><line x1="-10" y1="140" x2="-10" y2="144"/>
+      <line x1="20" y1="140" x2="20" y2="144"/><line x1="15" y1="139" x2="15" y2="143"/><line x1="10" y1="140" x2="10" y2="144"/>
+    </g>
   </g>
 
-  <!-- ======================== DESK LAMP ======================== -->
-  <!-- Lamp base -->
-  <ellipse cx="185" cy="254" rx="18" ry="4" fill="#2d333b"/>
-  <!-- Lamp arm -->
-  <line x1="185" y1="250" x2="180" y2="170" stroke="#484f58" stroke-width="3" stroke-linecap="round"/>
-  <line x1="180" y1="170" x2="200" y2="145" stroke="#484f58" stroke-width="3" stroke-linecap="round"/>
-  <!-- Lamp shade -->
-  <path d="M 190 145 L 175 120 L 225 120 L 210 145 Z" fill="#2d333b" stroke="#3d444d" stroke-width="1"/>
-  <!-- Lamp bulb glow -->
-  <ellipse cx="200" cy="135" rx="12" ry="8" fill="#ffb347" opacity="0.3">
-    <animate attributeName="opacity" values="0.3;0.2;0.3" dur="4s" repeatCount="indefinite"/>
+  <!-- ======== SMALL ITEMS ON WINDOWSILL ======== -->
+  <!-- Tiny succulent -->
+  <rect x="718" y="176" width="10" height="8" rx="2" fill="#6d4a30"/>
+  <ellipse cx="723" cy="174" rx="5" ry="4" fill="#39d353" opacity="0.7"/>
+  <ellipse cx="720" cy="172" rx="3" ry="3" fill="#2ea043" opacity="0.6"/>
+  <!-- Small candle -->
+  <rect x="832" y="176" width="8" height="8" rx="1.5" fill="#d4a574" opacity="0.6"/>
+  <ellipse cx="836" cy="174" rx="1" ry="2" fill="#ffb347" opacity="0.7">
+    <animate attributeName="ry" values="2;2.5;2" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.5;0.7" dur="2s" repeatCount="indefinite"/>
   </ellipse>
-  <circle cx="200" cy="128" r="4" fill="#ffe4b5" opacity="0.7"/>
 
-  <!-- ======================== WALL DECORATIONS ======================== -->
-  <!-- Small framed poster on wall (left of window) -->
-  <rect x="630" y="60" width="30" height="40" rx="2" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
-  <text x="645" y="78" text-anchor="middle" font-family="monospace" font-size="6" fill="#58a6ff" opacity="0.6">&lt;/&gt;</text>
-  <text x="645" y="90" text-anchor="middle" font-family="monospace" font-size="4" fill="#8b949e" opacity="0.4">CODE</text>
-
-  <!-- ======================== AMBIENT PARTICLES ======================== -->
+  <!-- ======== WARM AMBIENT PARTICLES ======== -->
   <g filter="url(#softGlow)">
-    <circle cx="150" cy="100" r="1.5" fill="#ffb347" opacity="0.3">
-      <animate attributeName="cy" values="100;85;100" dur="5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="500" cy="80" r="1" fill="#58a6ff" opacity="0.2">
-      <animate attributeName="cy" values="80;65;80" dur="4s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="4s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="680" cy="200" r="1.2" fill="#bc8cff" opacity="0.2">
-      <animate attributeName="cy" values="200;185;200" dur="3.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3.5s" repeatCount="indefinite"/>
-    </circle>
+    <circle cx="140" cy="95" r="1.5" fill="#ffb347" opacity="0.25"><animate attributeName="cy" values="95;80;95" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.25;0.45;0.25" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="520" cy="85" r="1" fill="#58a6ff" opacity="0.15"><animate attributeName="cy" values="85;70;85" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.15;0.3;0.15" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="660" cy="150" r="1.2" fill="#bc8cff" opacity="0.12"><animate attributeName="cy" values="150;135;150" dur="4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.12;0.25;0.12" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="280" cy="110" r="0.8" fill="#39d353" opacity="0.15"><animate attributeName="cy" values="110;98;110" dur="3.5s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- ======================== FLOOR ======================== -->
-  <rect x="0" y="385" width="900" height="15" fill="#14181f" rx="0"/>
-
-  <!-- ======================== TEXT OVERLAY (right side) ======================== -->
-  <g transform="translate(710, 210)">
+  <!-- ======== NAME + TITLE (right side, overlaid) ======== -->
+  <g transform="translate(730, 250)">
     <!-- Name -->
-    <text x="0" y="0" text-anchor="middle" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="36" fill="url(#nameGrad)" filter="url(#glow)">
-      ericsocrat
-    </text>
-    
+    <text x="0" y="0" text-anchor="middle" font-family="'Inter', 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="32" fill="url(#nameGrad)" filter="url(#glow)">Eric Socratous</text>
     <!-- Animated underline -->
-    <line x1="-100" y1="10" x2="100" y2="10" stroke="url(#lineGrad)" stroke-width="1.5" stroke-linecap="round">
-      <animate attributeName="x1" values="-50;-100;-50" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="x2" values="50;100;50" dur="6s" repeatCount="indefinite"/>
+    <line x1="-110" y1="10" x2="110" y2="10" stroke="url(#lineGrad)" stroke-width="1.5" stroke-linecap="round">
+      <animate attributeName="x1" values="-60;-110;-60" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="60;110;60" dur="6s" repeatCount="indefinite"/>
     </line>
-    
     <!-- Title -->
-    <text x="0" y="32" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#8b949e" letter-spacing="2">
-      Product Builder
-    </text>
-    <text x="0" y="46" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10" fill="#8b949e" letter-spacing="2">
-      &amp; AI Strategist
-    </text>
-    
-    <!-- Small tech pills -->
-    <g font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">
-      <rect x="-75" y="58" width="45" height="16" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="0.6" opacity="0.7"/>
-      <text x="-52" y="69" fill="#58a6ff">Next.js</text>
-      
-      <rect x="-22" y="58" width="45" height="16" rx="8" fill="#161b22" stroke="#39d353" stroke-width="0.6" opacity="0.7"/>
-      <text x="1" y="69" fill="#39d353">Python</text>
-      
-      <rect x="30" y="58" width="45" height="16" rx="8" fill="#161b22" stroke="#bc8cff" stroke-width="0.6" opacity="0.7"/>
-      <text x="53" y="69" fill="#bc8cff">PgSQL</text>
-    </g>
-    
-    <!-- Cursor + tagline -->
-    <rect x="-2" y="86" width="2" height="12" fill="#39d353" rx="0.5">
-      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/>
-    </rect>
-    <text x="0" y="96" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7.5" fill="#6e7681">building things that matter</text>
+    <text x="0" y="30" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="9.5" fill="#8b949e" letter-spacing="1.5">Product Builder</text>
+    <text x="0" y="43" text-anchor="middle" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="9.5" fill="#8b949e" letter-spacing="1.5">&amp; AI Strategist</text>
+    <!-- Pulsing cursor -->
+    <rect x="-1" y="54" width="2" height="12" fill="#39d353" rx="0.5"><animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/></rect>
+    <text x="0" y="63" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#6e7681">building things that matter</text>
+    <!-- Location -->
+    <text x="0" y="78" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#484f58">📍 Kraków, Poland  ·  🇨🇾 from Cyprus</text>
   </g>
 
-  <!-- ======================== CORNER ACCENTS ======================== -->
-  <path d="M 15 25 L 15 12 L 28 12" stroke="#58a6ff" stroke-width="1.5" fill="none" opacity="0.25">
-    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="3s" repeatCount="indefinite"/>
-  </path>
-  <path d="M 885 25 L 885 12 L 872 12" stroke="#39d353" stroke-width="1.5" fill="none" opacity="0.25">
-    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="3s" repeatCount="indefinite" begin="1s"/>
-  </path>
-  <path d="M 15 375 L 15 388 L 28 388" stroke="#bc8cff" stroke-width="1.5" fill="none" opacity="0.25">
-    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="3s" repeatCount="indefinite" begin="2s"/>
-  </path>
-  <path d="M 885 375 L 885 388 L 872 388" stroke="#f0883e" stroke-width="1.5" fill="none" opacity="0.25">
-    <animate attributeName="opacity" values="0.25;0.5;0.25" dur="3s" repeatCount="indefinite" begin="0.5s"/>
-  </path>
+  <!-- ======== CORNER ACCENTS ======== -->
+  <path d="M 15 25 L 15 12 L 28 12" stroke="#58a6ff" stroke-width="1.5" fill="none" opacity="0.2"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite"/></path>
+  <path d="M 885 25 L 885 12 L 872 12" stroke="#39d353" stroke-width="1.5" fill="none" opacity="0.2"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" begin="1s"/></path>
+  <path d="M 15 425 L 15 438 L 28 438" stroke="#bc8cff" stroke-width="1.5" fill="none" opacity="0.2"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" begin="2s"/></path>
+  <path d="M 885 425 L 885 438 L 872 438" stroke="#f0883e" stroke-width="1.5" fill="none" opacity="0.2"><animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" begin="0.5s"/></path>
 </svg>

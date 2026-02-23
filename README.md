@@ -1,10 +1,7 @@
 <div align="center">
 
-<!-- Animated header banner -->
-<img src="assets/header.svg" alt="ericsocrat — Product Builder & AI Strategist" width="100%" />
-
-<!-- Typing animation -->
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&multiline=true&repeat=true&width=620&height=70&lines=I+don%27t+write+code+%E2%80%94+I+architect+products+%F0%9F%9A%80;1%2C000%2B+products+scored+%C2%B7+12K%2B+tests+passing+%E2%9C%85" alt="Typing SVG" /></a>
+<!-- Animated cozy room header -->
+<img src="assets/header.svg" alt="Eric Socratous — Product Builder & AI Strategist, coding in a cozy room" width="100%" />
 
 </div>
 
@@ -13,18 +10,22 @@
 
 ## `$ whoami`
 
-Product builder who turns ideas into shipped software by strategically directing AI agents. I don’t come from a traditional coding background — I come from **knowing exactly what to build and how to orchestrate the tools to build it**.
+I’m **Eric Socratous** — a product builder from Cyprus, based in Kraków, Poland. My background is in Marine Engineering & Naval Architecture, but my passion has always been in technology and building things.
 
-I design the architecture, define the data models, write the specs, and drive every decision — then work with AI pair-programmers like GitHub Copilot to execute at speed. The result? Production-grade systems with thousands of automated tests, CI/CD pipelines, and real users.
+I don’t come from a traditional CS background. Instead, I leverage **AI agents and strategic product thinking** to turn ideas into real, shipped software. I design the architecture, define the data models, write the specs, and make every product decision — then work with AI tools like GitHub Copilot to execute at speed.
+
+The result? Production-grade systems with hundreds of automated tests, CI/CD pipelines, and real users.
 
 ```typescript
-const ericsocrat = {
-  role:      "Product Builder & AI Strategist",
+const eric = {
+  role:       "Product Builder & AI Strategist",
+  from:       "Cyprus 🇨🇾",
+  based:      "Kraków, Poland 🇵🇱",
   superpower: "Turning vision into production software via AI agents",
-  focus:     ["Data Products", "AI-Augmented Development", "Open Source"],
-  stack:     ["Next.js", "Python", "PostgreSQL", "Supabase", "FastAPI"],
-  method:    "Architecture + AI Agents + Relentless QA",
-  principle: "No data ships without automated verification",
+  focus:      ["Data Products", "AI-Augmented Development", "Open Source"],
+  stack:      ["Next.js", "Python", "PostgreSQL", "Supabase", "FastAPI"],
+  method:     "Architecture + AI Agents + Relentless QA",
+  principle:  "No data ships without automated verification",
 };
 ```
 
@@ -71,12 +72,10 @@ const ericsocrat = {
 
 ## 🧠 How I Build
 
-> *"The future belongs to people who can direct AI, not just people who can type code."*
-
 I work at the intersection of **product thinking** and **AI-augmented execution**:
 
 - **Architecture first** — I design the database schemas, API contracts, and system structure
-- **AI as my engineering team** — I direct Copilot agents with precise strategy and context
+- **AI as my engineering partner** — I direct Copilot agents with precise strategy and context
 - **Quality is non-negotiable** — 333 QA checks, 12K+ tests, SonarCloud, CodeQL, Playwright E2E
 - **Ship fast, ship right** — CI/CD pipelines, branch protection, automated deployment
 
@@ -116,44 +115,16 @@ Every commit goes through automated gates. Every data point is verified. Every d
 
 <img src="assets/wave.svg" width="100%" />
 
-## 📊 GitHub Stats
+## 📬 Let’s Connect
 
 <div align="center">
 
-<a href="https://github.com/ericsocrat">
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=ericsocrat&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&icon_color=39d353&text_color=c9d1d9&ring_color=bc8cff&include_all_commits=true&count_private=true" />
+<a href="https://www.linkedin.com/in/ericsocrat/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 <a href="https://github.com/ericsocrat">
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ericsocrat&layout=compact&theme=github_dark&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&langs_count=8" />
+  <img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=white" />
 </a>
-
-</div>
-
-<div align="center">
-
-<a href="https://github.com/ericsocrat">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=ericsocrat&theme=github-dark-blue&hide_border=true&background=0d1117&stroke=30363d&ring=58a6ff&fire=39d353&currStreakLabel=bc8cff&sideLabels=8b949e&dates=6e7681" />
-</a>
-
-</div>
-
-<img src="assets/wave.svg" width="100%" />
-
-## 📈 Contribution Graph
-
-<div align="center">
-
-[![ericsocrat's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ericsocrat&theme=github-compact&hide_border=true&bg_color=0d1117&color=58a6ff&line=bc8cff&point=39d353&area=true&area_color=58a6ff)](https://github.com/ericsocrat)
-
-</div>
-
-<img src="assets/wave.svg" width="100%" />
-
-## 🏆 Achievements
-
-<div align="center">
-
-[![trophy](https://github-profile-trophy.vercel.app/?username=ericsocrat&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=10)](https://github.com/ericsocrat)
 
 </div>
 
@@ -163,11 +134,7 @@ Every commit goes through automated gates. Every data point is verified. Every d
 
 **`2,500+ contributions in the last year`** · **`building things that matter`**
 
-<a href="https://github.com/ericsocrat?tab=repositories">
-  <img src="https://img.shields.io/badge/Explore_My_Repos-0d1117?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
-<br/><br/>
+<br/>
 
 <img src="https://komarev.com/ghpvc/?username=ericsocrat&style=flat-square&color=58a6ff&label=Profile+Views" />
 
