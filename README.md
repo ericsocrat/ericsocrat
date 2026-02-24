@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated cozy room header -->
-<img src="assets/header.svg" alt="Eric Socratous — Product Builder & AI Strategist, coding in a cozy room" width="100%" />
+<img src="assets/header.svg" alt="ericsocrat — Product Builder & AI Strategist, coding in a cozy room" width="100%" />
 
 </div>
 
@@ -10,11 +10,13 @@
 
 ## `$ whoami`
 
-I’m **Eric Socratous** — a product builder from Cyprus, based in Kraków, Poland. My background is in Marine Engineering & Naval Architecture, but my passion has always been in technology and building things.
+I'm **ericsocrat** — a product builder from Cyprus, based in Kraków, Poland. My background is in Marine Engineering & Naval Architecture, but my passion has always been in technology and building things.
 
-I don’t come from a traditional CS background. Instead, I leverage **AI agents and strategic product thinking** to turn ideas into production-grade software. I design the architecture, define the data models, write the specs, and make every product decision — then work with AI tools like GitHub Copilot to execute at speed.
+Day job: global supply-chain ops in maritime. Nights & weekends: building data products.
 
-The result? Systems with hundreds of automated tests, CI/CD pipelines, and solid engineering practices — ready to ship.
+I don't come from a traditional CS background. Instead, I leverage **AI agents and strategic product thinking** to turn ideas into production-grade software. I design the architecture, define the data models, write the specs, and make every product decision — then work with AI tools like GitHub Copilot to execute at speed.
+
+The result? Large automated test suites, CI gates (unit + E2E + security scanning), and solid engineering practices — ready to ship.
 
 ```typescript
 const eric = {
@@ -24,7 +26,7 @@ const eric = {
   superpower: "Turning vision into production software via AI agents",
   focus:      ["Data Products", "AI-Augmented Development", "Open Source"],
   stack:      ["Next.js", "Python", "PostgreSQL", "Supabase", "FastAPI"],
-  method:     "Architecture + AI Agents + Relentless QA",
+  method:     "Architecture + AI Agents + QA-first workflow",
   principle:  "No data ships without automated verification",
 };
 ```
@@ -43,11 +45,13 @@ const eric = {
 
 `PLpgSQL` `Python` `Next.js` `Supabase`
 
-- 🔬 9-factor scoring algorithm (v3.2)
-- 📊 4 independent quality axes per product
-- ✅ 333 automated QA checks across 22 suites
-- 🔗 97.3% EAN barcode coverage
-- 🛡️ 26 CHECK constraints + 4 FK reference tables
+- 🔬 9-factor scoring algorithm with 4 independent quality axes
+- 📊 Full nutritional breakdown per product (macros, micros, additives)
+- 🔗 97.3% EAN barcode coverage across all categories
+- 🛡️ Large automated test suite + CI gates (unit + E2E + security scanning)
+- 🏗️ 26 CHECK constraints + 4 FK reference tables for data integrity
+
+> **Recommendation:** If you're interested in food-tech data pipelines or scoring algorithms, start with the `db/pipelines/` directory — each category has its own self-contained SQL pipeline.
 
 </td>
 <td width="50%" valign="top">
@@ -59,10 +63,12 @@ const eric = {
 `TypeScript` `Next.js` `FastAPI` `Redis`
 
 - 📉 Advanced charts & technical indicators
-- 🤖 AI-powered research & analysis
-- 🧪 12,113 tests passing (85% coverage)
-- 🔐 CodeQL scanning + Renovate bot
-- ⚡ 91.3% CI/CD pass rate, 30 automated checks/PR
+- 🤖 AI-powered research & deep analysis engine
+- 🔐 CodeQL scanning + Renovate bot for dependency security
+- ⚡ Automated CI/CD pipeline with branch protection
+- 🧩 Modular architecture — API, frontend, and workers are fully decoupled
+
+> **Recommendation:** Check the API contracts and the deep-research integration if you're exploring AI-augmented financial UX patterns.
 
 </td>
 </tr>
@@ -74,10 +80,10 @@ const eric = {
 
 I work at the intersection of **product thinking** and **AI-augmented execution**:
 
-- **Architecture first** — I design the database schemas, API contracts, and system structure
+- **Architecture first** — I design the database schemas, API contracts, and system structure before writing code
 - **AI as my engineering partner** — I direct Copilot agents with precise strategy and context
-- **Quality is non-negotiable** — 333 QA checks, 12K+ tests, SonarCloud, CodeQL, Playwright E2E
-- **Ship fast, ship right** — CI/CD pipelines, branch protection, automated deployment
+- **QA-first workflow** — Large automated test suite + CI gates (unit + E2E + security scanning)
+- **Ship fast, ship right** — CI/CD pipelines, branch protection, automated deployment on every merge
 
 Every commit goes through automated gates. Every data point is verified. Every deployment is green.
 
@@ -115,7 +121,7 @@ Every commit goes through automated gates. Every data point is verified. Every d
 
 <img src="assets/wave.svg" width="100%" />
 
-## 📬 Let’s Connect
+## 📬 Let's Connect
 
 <div align="center">
 
@@ -132,10 +138,6 @@ Every commit goes through automated gates. Every data point is verified. Every d
 
 <div align="center">
 
-**`2,500+ contributions in the last year`** · **`building things that matter`**
-
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=ericsocrat&style=flat-square&color=58a6ff&label=Profile+Views" />
+**`building things that matter`**
 
 </div>
