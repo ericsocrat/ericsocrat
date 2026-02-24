@@ -10,13 +10,25 @@
 
 ## `$ whoami`
 
-I'm **ericsocrat** — a product builder from Cyprus, based in Kraków, Poland. My background is in Marine Engineering & Naval Architecture, but my passion has always been in technology and building things.
+I'm ericsocrat — a product builder from Cyprus, based in Kraków, Poland.
 
-Day job: global supply-chain ops in maritime. Nights & weekends: building data products.
+Background in Marine Engineering & Naval Architecture. Today I work in global maritime supply-chain operations.
 
-I don't come from a traditional CS background. Instead, I leverage **AI agents and strategic product thinking** to turn ideas into production-grade software. I design the architecture, define the data models, write the specs, and make every product decision — then work with AI tools like GitHub Copilot to execute at speed.
+Day job: global supply-chain ops.
+Nights & weekends: building structured data products.
 
-The result? Large automated test suites, CI gates (unit + E2E + security scanning), and solid engineering practices — ready to ship.
+I don’t come from a traditional CS background. My strength is systems thinking. I design architectures, define data models, write specifications, and set verification rules — then leverage AI coding agents (GitHub Copilot and others) to implement efficiently.
+
+I focus on:
+
+• Deterministic data modeling
+• Idempotent ingestion pipelines
+• Clear API contracts
+• QA-first workflows
+• Large automated test suites
+• CI gates (unit + E2E + security scanning)
+
+The goal: production-grade systems built with structure, clarity, and guardrails.
 
 ```typescript
 const eric = {
