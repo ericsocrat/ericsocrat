@@ -22,10 +22,15 @@ I don’t come from a traditional CS background. My strength is systems thinking
 I focus on:
 
 • Deterministic data modeling
+
 • Idempotent ingestion pipelines
+
 • Clear API contracts
+
 • QA-first workflows
+
 • Large automated test suites
+
 • CI gates (unit + E2E + security scanning)
 
 The goal: production-grade systems built with structure, clarity, and guardrails.
