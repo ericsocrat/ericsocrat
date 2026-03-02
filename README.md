@@ -17,7 +17,7 @@ Background in Marine Engineering & Naval Architecture. Today I work in global ma
 Day job: global supply-chain ops.
 Nights & weekends: building structured data products.
 
-I don’t come from a traditional CS background. My strength is systems thinking. I design architectures, define data models, write specifications, and set verification rules — then leverage AI coding agents (GitHub Copilot and others) to implement efficiently.
+I don't come from a traditional CS background. My strength is systems thinking. I design architectures, define data models, write specifications, and set verification rules — then leverage AI coding agents (GitHub Copilot and others) to implement efficiently.
 
 I focus on:
 
@@ -56,17 +56,17 @@ const eric = {
 <tr>
 <td width="50%" valign="top">
 
-### 🍎 [Poland Food DB](https://github.com/ericsocrat/poland-food-db)
+### 🧬 [TryVit](https://github.com/ericsocrat/tryvit)
 
-**World-class food quality database** scoring 1,025+ products sold in Poland using a 9-factor weighted algorithm based on nutritional science and EU regulatory guidelines.
+**Multi-axis food health scoring platform** — 1,281+ products scored across 25 categories (Poland + Germany) using a 9-factor weighted algorithm grounded in nutritional science, EFSA guidelines, and EU regulatory data.
 
 `PLpgSQL` `Python` `Next.js` `Supabase`
 
-- 🔬 9-factor scoring algorithm with 4 independent quality axes
-- 📊 Full nutritional breakdown per product (macros, micros, additives)
-- 🔗 97.3% EAN barcode coverage across all categories
-- 🛡️ Large automated test suite + CI gates (unit + E2E + security scanning)
-- 🏗️ 26 CHECK constraints + 4 FK reference tables for data integrity
+- 🔬 9-factor scoring engine (v3.2) with 4 independent quality axes
+- 📊 2,995 canonical ingredients with EFSA concern tiers & additive classification
+- 🔗 99.8% EAN barcode coverage (1,277/1,279 products)
+- 🛡️ 733 QA checks across 48 suites + 23 negative validation tests
+- 🏗️ 184 append-only migrations, 24 CHECK constraints, 30+ RPC API functions
 
 > **Recommendation:** If you're interested in food-tech data pipelines or scoring algorithms, start with the `db/pipelines/` directory — each category has its own self-contained SQL pipeline.
 
